@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="landscape">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="RcCar_iOS" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="667" height="375"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <wkWebView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="gk6-55-6yc">
+                                <rect key="frame" x="0.0" y="0.0" width="667" height="375"/>
+                                <color key="backgroundColor" red="0.36078431370000003" green="0.38823529410000002" blue="0.4039215686" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <wkWebViewConfiguration key="configuration">
+                                    <audiovisualMediaTypes key="mediaTypesRequiringUserActionForPlayback" none="YES"/>
+                                    <wkPreferences key="preferences"/>
+                                </wkWebViewConfiguration>
+                            </wkWebView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="LrW-pe-WWx" customClass="CDJoystick" customModule="RcCar_iOS" customModuleProvider="target">
+                                <rect key="frame" x="40" y="150" width="185" height="185"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="185" id="QGS-0h-zv1"/>
+                                    <constraint firstAttribute="width" secondItem="LrW-pe-WWx" secondAttribute="height" multiplier="1:1" id="lyc-yQ-RiR"/>
+                                </constraints>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="3zL-ZF-tUw" customClass="CDJoystick" customModule="RcCar_iOS" customModuleProvider="target">
+                                <rect key="frame" x="442" y="150" width="185" height="185"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="185" id="Nsl-aU-gtf"/>
+                                    <constraint firstAttribute="width" secondItem="3zL-ZF-tUw" secondAttribute="height" multiplier="1:1" id="sZM-Al-I0l"/>
+                                </constraints>
+                            </view>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WtY-8N-6re">
+                                <rect key="frame" x="290" y="283" width="86" height="52"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="33"/>
+                                <state key="normal" title="Panic!">
+                                    <color key="titleColor" red="0.78647774459999997" green="0.2670173347" blue="0.25099295379999997" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                </state>
+                                <connections>
+                                    <action selector="doPanic:" destination="BYZ-38-t0r" eventType="touchUpInside" id="3ig-TC-yI6"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="gk6-55-6yc" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="9wG-B7-iqO"/>
+                            <constraint firstItem="gk6-55-6yc" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="Mnw-zr-hbV"/>
+                            <constraint firstItem="gk6-55-6yc" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="RhU-Pa-ttC"/>
+                            <constraint firstAttribute="bottom" secondItem="LrW-pe-WWx" secondAttribute="bottom" constant="40" id="f7H-pm-mI0"/>
+                            <constraint firstItem="3zL-ZF-tUw" firstAttribute="width" secondItem="3zL-ZF-tUw" secondAttribute="height" multiplier="1:1" id="gcp-S2-UhU"/>
+                            <constraint firstAttribute="trailing" secondItem="3zL-ZF-tUw" secondAttribute="trailing" constant="40" id="hAz-CE-jNd"/>
+                            <constraint firstAttribute="bottom" secondItem="WtY-8N-6re" secondAttribute="bottom" constant="40" id="kXp-lY-OKK"/>
+                            <constraint firstItem="WtY-8N-6re" firstAttribute="centerX" secondItem="gk6-55-6yc" secondAttribute="centerX" id="qmK-hn-Jdi"/>
+                            <constraint firstItem="gk6-55-6yc" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="rmh-1l-Jku"/>
+                            <constraint firstItem="LrW-pe-WWx" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="40" id="slM-be-8dP"/>
+                            <constraint firstAttribute="bottom" secondItem="3zL-ZF-tUw" secondAttribute="bottom" constant="40" id="uWq-Cs-dZF"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <connections>
+                        <outlet property="leftJoystick" destination="LrW-pe-WWx" id="PBR-bv-HdX"/>
+                        <outlet property="rightJoystick" destination="3zL-ZF-tUw" id="cP3-X3-K3t"/>
+                        <outlet property="webView" destination="gk6-55-6yc" id="2ng-ja-juO"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="139.880059970015" y="133.59999999999999"/>
+        </scene>
+    </scenes>
+</document>
