@@ -62,7 +62,7 @@ fastlane/test_output
 ### SwiftPM ###
 Packages
 xcuserdata
-*.xcodeproj
+#*.xcodeproj
 ### Xcode ###
 # Xcode
 #
