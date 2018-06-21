@@ -12,7 +12,7 @@ public class GPIOActuatorParameterListener: CarParameterListener {
         pwmSteering = (pwms[0]?[.P18])!
         pwmSteering.initPWM()
 
-        pwmAcceleration = (pwms[0]?[.P13])!
+        pwmAcceleration = (pwms[1]?[.P13])!
         pwmAcceleration.initPWM()
     }
 
